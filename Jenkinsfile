@@ -1,9 +1,7 @@
 
 pipeline {
-    agent any
-
-    tools {
-        nodejs 'NodeJS-22'
+    agent {
+        label 'windows-docker'
     }
 
     options {
@@ -17,15 +15,35 @@ pipeline {
             }
         }
 
+        stage('Check Tools') {
+            steps {
+                bat 'node --version'
+                bat 'npm --version'
+                bat 'docker --version'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+                bat 'npm ci'
             }
         }
 
         stage('Build React Application') {
             steps {
-                sh 'npm run build'
+                bat 'npm run build'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                bat 'docker build -t dreamhomes:latest .'
+            }
+        }
+
+        stage('Deploy Website') {
+            steps {
+                bat 'powershell.exe -NoProfile -ExecutionPolicy Bypass -File deploy.ps1'
             }
         }
 
@@ -39,10 +57,11 @@ pipeline {
 
     post {
         success {
-            echo 'DreamHomes build completed successfully!'
+            echo 'DreamHomes CI/CD deployment completed successfully!'
         }
+
         failure {
-            echo 'Build failed. Check the console output.'
+            echo 'Pipeline failed. Check Console Output.'
         }
     }
 }
