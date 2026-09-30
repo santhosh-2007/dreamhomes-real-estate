@@ -1,20 +1,66 @@
-<<<<<<< HEAD
-# React + Vite
+# DreamHomes – Luxury Real Estate Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+DreamHomes is a responsive real estate property catalog built using React and Vite. It helps users explore luxury properties and filter listings based on their preferences.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Luxury real estate homepage
+* Property listings with images and details
+* Search and filter properties
+* Filters for location, property type, budget, and bedrooms
+* Wishlist functionality
+* Property details modal
+* Responsive design for desktop and mobile
+* About, services, and contact sections
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* JavaScript
+* HTML
+* CSS
+* Git and GitHub
 
-## Expanding the Oxlint configuration
+## Run Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-=======
-# dreamhomes-real-estate
->>>>>>> b2c475671ac1bfe1c45bcdf367442f65d287026e
+### Prerequisites
+
+* Node.js
+* npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/santhosh-2007/dreamhomes-real-estate.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd dreamhomes-real-estate
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal, usually `http://localhost:5173`.
+
+## Project Status
+
+The project is under development as part of a DevOps learning project. Docker, Jenkins, Terraform, Ansible, and Kubernetes integration will be explored in subsequent stages.
+
+## Author
+
+Santhosh S
