@@ -1,7 +1,7 @@
 
 $ErrorActionPreference = "Stop"
 
-$ProjectPath = "C:\Users\hp\OneDrive\Desktop\real-estate-property-catalog"
+$ProjectPath = $PSScriptRoot
 $ImageName = "dreamhomes:latest"
 $ContainerName = "dreamhomes-container"
 
